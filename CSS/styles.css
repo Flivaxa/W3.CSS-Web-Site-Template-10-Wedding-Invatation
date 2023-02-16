@@ -1,0 +1,270 @@
+/* Start Variables */
+:root {
+    --main-clr: #f2e1e1;
+    --second-clr: #ffdddd;
+    --light-bg-clr: #ffffff;
+    --light-h-clr: #ffffff;
+    --light-txt-clr: #ffffff;
+    --dark-h-clr: #757575;
+    --dark-bg-clr: #000000;
+}
+/* End Variables */
+/* Start Global Rules */
+* {
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+.container {
+    max-width: 1050px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 25px;
+    padding-right: 25px;
+}
+html {
+    scroll-behavior: smooth;
+}
+body {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+img {
+    width: 100%;
+    height: auto;
+}
+a {
+    text-decoration: none;
+    color: unset;
+}
+/* End Global Rules */
+
+/* Start Header */
+header {
+    background-color: rgb(255, 255, 255, 50%);
+    padding: 8px 20px;
+    position: fixed;
+    z-index: 100;
+    width: 100%;
+    bottom: 0;
+    transition: 0.5s;
+}
+@media (max-width: 599px) {
+    header {
+        display: none;
+    }
+}
+header:hover {
+    background-color: var(--light-bg-clr, #ffffff);
+}
+header nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+}
+header nav ul li {
+    flex: 1;
+    text-align: center;
+}
+header nav ul li a {
+    display: block;
+    padding: 8px;
+    font-size: 0.9rem;
+}
+header nav ul li a:hover {
+    background-color: #cccccc;
+}
+/* End Header */
+
+/* Start Landing  */
+.landing {
+    height: 100vh;
+    background-image: url(../images/landing.jpg);
+    background-size: cover;
+    position: relative;
+}
+.landing::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 30%);
+}
+.landing .holder {
+    position: absolute;
+    z-index: 2;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    font-family: 'Raleway', sans-serif;
+    color: var(--light-h-clr);
+}
+.landing .holder h1 {
+    font-size: 4.5rem;
+    font-weight: 400;
+    margin: 20px 0;
+}
+.landing .holder p {
+    font-size: 2.2rem;
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+.landing .holder .date {
+    font-size: 2.2rem;
+    font-weight: 500;
+}
+/* End Landing  */
+
+/* Start Couple */
+.couple {
+    padding: 70px 0;
+    background-color: var(--main-clr, #f2e1e1);
+}
+.couple h2 {
+    color: var(--dark-h-clr, #757575);
+    font-family: 'Raleway', sans-serif;
+    font-size: 2rem;
+    text-align: center;
+    margin-top: 0;
+}
+.couple img {
+    margin: 25px 0;
+}
+.couple p {
+    line-height: 1.7;
+    color: #333333;
+}
+.couple a {
+    display: block;
+    font-size: 1.1rem;
+    color: #ffffff;
+    background-color: var(--dark-bg-clr);
+    padding: 20px 18px;
+    border-radius: 3px;
+    margin: 50px auto 0;
+    width: fit-content;
+    transition: 0.25s;
+}
+.couple a:hover {
+    background-color: #cccccc;
+    color: #000000;
+}
+/* End Couple */
+
+/* Start Invatation */
+.invatation {
+    height: 100vh;
+    background-image: url(../images/flowers.jpg);
+    background-size: cover;
+    position: relative;
+}
+.invatation .holder {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: var(--light-txt-clr, #ffffff);
+}
+.invatation .holder h2 {
+    font-size: 4rem;
+    font-weight: 500;
+    font-family: 'Raleway', sans-serif;
+    margin-top: 0;
+}
+.invatation .holder span {
+    font-size: 1.8rem;
+}
+/* End Invatation */
+
+/* Start wedding */
+.wedding {
+    padding: 70px 0;
+    background-color: var(--main-clr, #f2e1e1);
+}
+.wedding h2 {
+    margin: 0;
+    color: var(--dark-h-clr, #757575);
+    font-family: 'Raleway', sans-serif;
+    font-size: 2.2rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    text-align: center;
+}
+.wedding img {
+    margin: 80px 0;
+}
+.wedding .wh {
+    display: flex;
+}
+@media (max-width: 599px) {
+    .wedding .wh {
+        flex-direction: column;
+        gap: 20px;
+    }
+}
+.wedding .wh > div {
+    flex: 1;
+    text-align: center;
+}
+.wedding .wh > div h3 {
+    margin-top: 0;
+    font-family: 'Raleway', sans-serif;
+    font-size: 1.8rem;
+    font-weight: 400;
+}
+.wedding .wh > div p {
+    margin: 25px 0;
+    color: #333;
+}
+/* End wedding */
+
+/* Start RSVP */
+.rsvp {
+    padding: 80px 0;
+    background-color: var(--second-clr, #ffdddd);
+    text-align: center;
+}
+.rsvp h2 {
+    font-size: 2.5rem;
+    font-weight: 400;
+    margin: 0;
+}
+.rsvp p {
+    font-size: 1.5rem;
+    font-weight: 300;
+    margin-bottom: 34px;
+}
+.rsvp a {
+    display: inline-block;
+    color: white;
+    background-color: #f88179;
+    font-size: 1.4rem;
+    padding: 18px 60px;
+    border-radius: 4px;
+    transition: 0.25s;
+}
+.rsvp a:hover {
+    color: #000000;
+    background-color: #cccccc;
+}
+/* End RSVP */
+
+/* Start Footer */
+footer {
+    color: var(--light-txt-clr, #ffffff);
+    background-color: var(--dark-bg-clr, #000000);
+    padding: 50px;
+    text-align: center;
+}
+footer a {
+    text-decoration: underline;
+}
+footer a:hover {
+    color: green;
+}
+/* End Footer */
